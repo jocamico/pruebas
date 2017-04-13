@@ -12,7 +12,7 @@ namespace ConsumirWebService
         {
             try
             {
-                var joca = 0;
+                var joca = 1;
                 string xmlDoc = System.IO.File.ReadAllText(@"D:\Pruebas\pagos.xml");
                 //string xmlDoc = System.IO.File.ReadAllText(@"G:\Proyectos\PEZTALOZZI\pruebas\PruebaFR\kenyi\22032017\entregas.xml");
                 Console.Write("Archivo Cargado");
