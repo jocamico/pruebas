@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://www.celeritech.biz/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://www.celeritech.biz/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.celeritech.biz/">
+      <s:element name="CrearDocumentoEntrega">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xmlDoc" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CrearDocumentoEntregaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CrearDocumentoEntregaResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CrearDocumentoVentasArticulo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xmlDoc" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CrearDocumentoVentasArticuloResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CrearDocumentoVentasArticuloResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CrearDocumentoPagoVentas">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xmlDoc" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CrearDocumentoPagoVentasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CrearDocumentoPagoVentasResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RegistrarSocioDeNegocios">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xmlDoc" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RegistrarSocioDeNegociosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RegistrarSocioDeNegociosResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CrearAsientoContable">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xmlDoc" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CrearAsientoContableResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CrearAsientoContableResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="CrearDocumentoEntregaSoapIn">
+    <wsdl:part name="parameters" element="tns:CrearDocumentoEntrega" />
+  </wsdl:message>
+  <wsdl:message name="CrearDocumentoEntregaSoapOut">
+    <wsdl:part name="parameters" element="tns:CrearDocumentoEntregaResponse" />
+  </wsdl:message>
+  <wsdl:message name="CrearDocumentoVentasArticuloSoapIn">
+    <wsdl:part name="parameters" element="tns:CrearDocumentoVentasArticulo" />
+  </wsdl:message>
+  <wsdl:message name="CrearDocumentoVentasArticuloSoapOut">
+    <wsdl:part name="parameters" element="tns:CrearDocumentoVentasArticuloResponse" />
+  </wsdl:message>
+  <wsdl:message name="CrearDocumentoPagoVentasSoapIn">
+    <wsdl:part name="parameters" element="tns:CrearDocumentoPagoVentas" />
+  </wsdl:message>
+  <wsdl:message name="CrearDocumentoPagoVentasSoapOut">
+    <wsdl:part name="parameters" element="tns:CrearDocumentoPagoVentasResponse" />
+  </wsdl:message>
+  <wsdl:message name="RegistrarSocioDeNegociosSoapIn">
+    <wsdl:part name="parameters" element="tns:RegistrarSocioDeNegocios" />
+  </wsdl:message>
+  <wsdl:message name="RegistrarSocioDeNegociosSoapOut">
+    <wsdl:part name="parameters" element="tns:RegistrarSocioDeNegociosResponse" />
+  </wsdl:message>
+  <wsdl:message name="CrearAsientoContableSoapIn">
+    <wsdl:part name="parameters" element="tns:CrearAsientoContable" />
+  </wsdl:message>
+  <wsdl:message name="CrearAsientoContableSoapOut">
+    <wsdl:part name="parameters" element="tns:CrearAsientoContableResponse" />
+  </wsdl:message>
+  <wsdl:portType name="WS_SB1Soap">
+    <wsdl:operation name="CrearDocumentoEntrega">
+      <wsdl:input message="tns:CrearDocumentoEntregaSoapIn" />
+      <wsdl:output message="tns:CrearDocumentoEntregaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CrearDocumentoVentasArticulo">
+      <wsdl:input message="tns:CrearDocumentoVentasArticuloSoapIn" />
+      <wsdl:output message="tns:CrearDocumentoVentasArticuloSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CrearDocumentoPagoVentas">
+      <wsdl:input message="tns:CrearDocumentoPagoVentasSoapIn" />
+      <wsdl:output message="tns:CrearDocumentoPagoVentasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarSocioDeNegocios">
+      <wsdl:input message="tns:RegistrarSocioDeNegociosSoapIn" />
+      <wsdl:output message="tns:RegistrarSocioDeNegociosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CrearAsientoContable">
+      <wsdl:input message="tns:CrearAsientoContableSoapIn" />
+      <wsdl:output message="tns:CrearAsientoContableSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WS_SB1Soap" type="tns:WS_SB1Soap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CrearDocumentoEntrega">
+      <soap:operation soapAction="http://www.celeritech.biz/CrearDocumentoEntrega" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CrearDocumentoVentasArticulo">
+      <soap:operation soapAction="http://www.celeritech.biz/CrearDocumentoVentasArticulo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CrearDocumentoPagoVentas">
+      <soap:operation soapAction="http://www.celeritech.biz/CrearDocumentoPagoVentas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarSocioDeNegocios">
+      <soap:operation soapAction="http://www.celeritech.biz/RegistrarSocioDeNegocios" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CrearAsientoContable">
+      <soap:operation soapAction="http://www.celeritech.biz/CrearAsientoContable" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WS_SB1Soap12" type="tns:WS_SB1Soap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CrearDocumentoEntrega">
+      <soap12:operation soapAction="http://www.celeritech.biz/CrearDocumentoEntrega" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CrearDocumentoVentasArticulo">
+      <soap12:operation soapAction="http://www.celeritech.biz/CrearDocumentoVentasArticulo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CrearDocumentoPagoVentas">
+      <soap12:operation soapAction="http://www.celeritech.biz/CrearDocumentoPagoVentas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarSocioDeNegocios">
+      <soap12:operation soapAction="http://www.celeritech.biz/RegistrarSocioDeNegocios" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CrearAsientoContable">
+      <soap12:operation soapAction="http://www.celeritech.biz/CrearAsientoContable" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WS_SB1">
+    <wsdl:port name="WS_SB1Soap" binding="tns:WS_SB1Soap">
+      <soap:address location="http://192.168.86.132/WS_SB1.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WS_SB1Soap12" binding="tns:WS_SB1Soap12">
+      <soap12:address location="http://192.168.86.132/WS_SB1.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
